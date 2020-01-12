@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    // function 함수명([인자...[,인자]]){
+    //     코드
+    //     return 반환값;
+    // }
+    
+    function numbering(){
+        i = 0;
+        while(i<20){
+            document.write(i+"<br />");
+            i += 1;
+        }
+    }
+    numbering();
+
+    for(var j=0; j<4; j++){
+        numbering();
+    }
+
+    function get_member1(){
+        return 'kjae';
+    }
+
+    function get_member2(){
+        return 'egoing';
+    }
+
+    alert(get_member1());
+    alert(get_member2());
+
+    function get_argument(arg){
+        return arg;
+    }
+    alert(get_argument(1));
+    alert(get_argument(2));
+
+    numbering = function (){
+        i = 0;
+        while(i<20){
+            document.write(i);
+            i += 1;
+        }
+    }
+    function numbering(){
+        i = 0;
+        while(i<20){
+            document.write(i);
+            i += 1;
+        }
+    }
+
+    //익명함수
+    (function (){
+        i = 0;
+        while(i<20){
+            document.write(i);
+            i += 1;
+        }
+    })();
+    
+</script>    
+</body>
+
+</html>

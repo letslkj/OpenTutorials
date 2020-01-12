@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    //capture
+    var pattern = /(\w+)\s(\w+)/; //단어 띄어쓰기 단어 패턴
+    var str = "coding everybody";
+    var result = str.replace(pattern, "$2, $1"); //두번째 그룹과 첫번째 그룹순으로 순서를 바꿔줌
+    console.log(result);
+
+    //치환
+    var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+    var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+    var result = content.replace(urlPattern, function(url){ //urlPattern을 찾을때마다 function에 해당 패턴에 해당되는 값을 넣어서 치환해줌
+        return '<a href="'+url+'">'+url+'</a>';
+    });
+    console.log(result);
+</script>  
+</body>
+
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var xi = /a/;
+    console.log("Abcde".match(xi)); //null
+
+    var oi = /a/i; //i는 대소문자 구분 필요없다는 뜻.
+    console.log("Abcde".match(xi)); //null
+    console.log("Abcde".match(oi)); //A
+
+    var xg = /a/; //해당되는 첫번째값만 반환
+    console.log("abcdea".match(xg));
+
+    var xg = /a/g; //g를 붙이면 해당하는 값 전부를 반환해줌
+    console.log("abcdea".match(xg));
+    
+    var ig = /a/ig; //대소문자 구분없이 해당되는 모든값 반환
+    console.log("Abcdea".match(ig));
+</script>  
+</body>
+
+
+</html>

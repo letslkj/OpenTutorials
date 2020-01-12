@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    //정규표현식 - 필요한 정보를 추출, 테스트, 치환 할수 있음.
+    // var str = "a";
+    
+    // var pattern = /a/; //a를 찾고자함 정규표현식 객체를 pattern에 저장
+    // var pattern = new RegExp('a'); //정규표현식 객체를 pattern에 저장
+
+    // document.write(pattern);
+    // alert(pattern);
+
+    var pattern = /a/;
+    document.write(pattern.exec('abcde')); //a를 찾아줌
+    
+    var pattern = /a./;
+    document.write(pattern.exec('abcde')); //a와 .에 해당하는 아무 문자인 ab반환
+
+    var pattern = /a/;
+    document.write(pattern.exec('bcdef')); //a가 없기에 null반환
+
+    document.write(pattern.test('abcde')); //a값 유무 참 거짓 반환
+    document.write(pattern.test('bcde')); //a값 유무 참 거짓 반환
+
+    var pattern = /a/;
+    var str = 'abcdef';
+    document.write(str.match(pattern)); //str 문자에서 pattern에 해당하는값찾기
+    document.write(str.replace(pattern,'A')); //str 문자에서 pattern에 해당하는값을 A로 변환
+    
+
+</script>  
+</body>
+
+
+</html>

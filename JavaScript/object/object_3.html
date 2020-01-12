@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var grades = {
+        'list' : {'egoing' : 10, 'k8805' : 8, 'sorialgi' : 80},
+        'show' : function(){
+            for(var name in this.list){
+                console.log(name, this.list[name]); //콤마를 통해 여러가지 값을 출력가능
+            }
+            console.log(this.list); //this는 함수를 가지는 객체를 가리키는 변수 여기서는 grades를 가리킴.
+        }
+    }   //하나의 grade안에 list와 show 두가지 개념을 함께 쓸 수있는 객체지향 프로그램
+    //alert(grades['list']['egoing']);
+    alert(grades.list.egoing);
+    grades.show();
+</script>  
+</body>
+
+
+</html>
