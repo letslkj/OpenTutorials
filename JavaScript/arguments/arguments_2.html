@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function zero(){
+        console.log(
+            'zero.length', zero.length,
+            'arguments', arguments.length
+        );
+    }
+    zero(); // zero.length 0 arguments 0 
+
+    function one(arg1){
+        console.log(
+            'one.length', one.length,       //함수가 정의한 매개변수 숫자 
+            'arguments', arguments.length   //실제 입력한 매개변수 숫자
+        );                                  //두개의 숫자를 비교해서 함수가 정의한 매개변수만큼 변수를 지정했는지 파악가능
+    }
+    one('val1', 'val2');  // one.length 1 arguments 2 
+
+    function two(arg1, arg2){
+        console.log(
+            'two.length', two.length,
+            'arguments', arguments.length
+        );
+    }
+    two('val1');  // two.length 2 arguments 1
+</script>    
+</body>
+</html>

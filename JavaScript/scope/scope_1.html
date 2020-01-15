@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var vscope = 'global'; //전역변수
+    function fscope(){
+        var vscope = 'local'; //이경우는 vscope이름이 전역변수와 같지만 var로 새로 선언한 지역변수임
+        //  vscope = 'local' 이경우는 var로 선언이 없는 경우 전역변수를 바꿔주게 됨
+        var lv = 'local variables'
+        alert(vscope); //함수안에 가까운 vscope변수부터 찾아서 출력함.
+        alert(lv);
+    }
+    function fscope2(){
+        alert(vscope);
+        //전역변수값인 global를 호출함. 
+    }
+    fscope();
+    fscope2();
+    alert(lv);
+</script>    
+</script> 2   
+</body>
+</html>

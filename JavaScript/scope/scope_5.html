@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var i = 5; //함수밖에서 선언이므로 전역변수
+ 
+    function a(){
+        var i = 10; //함수안에서 선언한 지역변수
+        b();
+    }
+    
+    function b(){
+        document.write(i); //b()내부에 i를 선언한 지역변수를 찾지 못해서 전역변수인 5를 출력한다.
+        //함수가 선언된 시점에서의 유효범위를 갖는다. 이러한 유효범위의 방식을 정적 유효범위(static scoping), 
+        //혹은 렉시컬(lexical scoping)이라고 한다. 
+    }
+    
+    a();
+</script> 
+</body>
+</html>

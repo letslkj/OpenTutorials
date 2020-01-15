@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //클로저(closure)는 내부함수가 외부함수의 맥락(context)에 접근할 수 있는 것
+    function outter(){ //외부함수
+        var title = 'coding everybody'; 
+        function inner(){ //내부함수
+            alert(title);//내부함수에 title이 없어서 외부함수의 title변수로 접근
+        }
+        inner();
+    }
+    outter();
+</script>    
+</body>
+</html>

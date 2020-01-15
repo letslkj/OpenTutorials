@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function a(){
+        var i = 0; //var 선언을 하지 않는다면 for문의 i를 전역변수로 활용하기때문에 계속 0값을 가져 무한 루프에 빠진다
+    }
+    for(var i=0; i<5; i++){
+        a();
+        document.write(i);
+    }   
+</script> 
+</body>
+</html>
