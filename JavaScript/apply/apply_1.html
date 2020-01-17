@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function func(){
+    }
+    func(); 
+
+    function sum(arg1, arg2){
+        return arg1+arg2;
+    }
+    alert(sum(1,2));//단순 숫자를 이용한 합을 구할때
+    alert(sum.apply(null, [1,2])); //두번째 인자는 합과 관계된 배열
+    
+</script>    
+</body>
+</html>

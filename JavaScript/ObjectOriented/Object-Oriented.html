@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //객체란 서로 연관된 변수와 함수를 그룹핑한 그릇이라고 할 수 있다. 
+    //객체 내의 변수를 프로퍼티(property) 함수를 메소드(method)라고 부른다. 
+    var person = {} //person 객체라고하는 그릇을 만들었다.
+    person.name = 'egoing'; //객체에 name이라는 프로퍼티에 'egoing'값을 저장.
+    person.introduce = function(){ //객체에 introduce라는 메소드 저장.
+        return 'My name is '+this.name; //this는 함수각 속한 객체인 person을 뜻함.
+    }
+    document.write(person.introduce());
+
+    //객체를 만드는 과정에 분산도를 줄이기 위해서
+    var person = {
+        'name' : 'egoing',
+        'introduce' : function(){
+            return 'My name is '+this.name;
+        }
+    }
+    document.write(person.introduce());
+    
+</script>    
+</body>
+</html>
